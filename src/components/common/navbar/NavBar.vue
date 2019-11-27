@@ -1,5 +1,5 @@
 <template>
-  <div id="nav_bar">
+  <div class="nav_bar">
     <div class="nav-left"><slot name="nav-left"></slot></div>
     <div class="nav-center"><slot name="nav-center"></slot></div>
     <div class="nav-right"><slot name="nav-right"></slot></div>
@@ -13,7 +13,7 @@
 </script>
 
 <style scoped>
-  #nav_bar {
+  .nav_bar {
     position: fixed;
     right: 0;
     top: 0;
@@ -22,10 +22,11 @@
     height: 44px;
     line-height: 44px;
     text-align: center;
-    background-color: #ff5777;
+    background-color: #fff;
     color: #fff;
     font-size: 16px;
-    box-shadow: 0 1px 1px rgba(100, 100, 100, .2)
+    box-shadow: 0 1px 1px rgba(100, 100, 100, .2);
+    z-index: 99
   }
   .nav-left,
   .nav-right {

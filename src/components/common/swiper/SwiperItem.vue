@@ -1,22 +1,22 @@
 <template>
-  <div class="zj-slide">
-    <slot></slot>
-  </div>
+    <div class="slide">
+      <slot></slot>
+    </div>
 </template>
 
 <script>
-  export default {
-    name: "SwiperItem"
-  }
+	export default {
+		name: "Slide"
+	}
 </script>
 
 <style scoped>
-  .zj-slide {
-    float: left;
-    width: 25%;
+  .slide {
+    width: 100%;
     flex-shrink: 0;
   }
-  .zj-slide img {
+
+  .slide img {
     width: 100%;
   }
 </style>
