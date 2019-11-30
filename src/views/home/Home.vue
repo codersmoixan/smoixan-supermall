@@ -78,12 +78,12 @@
       // 2. 重新获得热点的时候页面和失去热点时候的页面位置一致
       this.$refs.scroll._scrollTo(0, this.currentY, 0)
       this.$refs.scroll._refresh()
-      // console.log(this.currentY)
+      console.log(this.currentY)
     },
     deactivated() {
       // 1. 失去热点的时候保存当前滚动的位置
       this.currentY = this.$refs.scroll._getScrollY()
-      // console.log(this.currentY)
+      console.log(this.currentY)
     },
     methods: {
 
@@ -179,6 +179,7 @@
     bottom: 49px;
     left: 0;
     right: 0;
+    overflow: hidden;
   }
   .home .home-control-one {
     position: relative;

@@ -9,6 +9,13 @@ export function getDetail(iid) {
   })
 }
 
+// 请求详情页的推荐数据
+export function getRecommend() {
+  return request({
+    url:'/recommend'
+  })
+}
+
 // 商品概述
 export class Goods {
   constructor (itemInfo, columns, shopInfo) {
@@ -19,6 +26,7 @@ export class Goods {
     this.discount = itemInfo.discountDesc
     this.columns = columns
     this.services = shopInfo.services
+    this.lowNowPrice = itemInfo.lowNowPrice
   }
 }
 

@@ -6,9 +6,9 @@ export function request(config) {
   return new Promise((resolve, reject) => {
     // 1. 创建 axios 的实例对象
     const instance = axios.create({
-      // baseURL: 'http://123.207.32.32:8000/api/vip', // 备用接口
-      baseURL: 'http://106.54.54.237:8000/api/v1',
-      timeout: 5000
+      baseURL: 'http://123.207.32.32:8000/api/vip', // 备用接口
+      // baseURL: 'http://106.54.54.237:8000/api/v1',
+      timeout: 10000
     })
 
     //过滤器（拦截器）

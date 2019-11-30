@@ -10,7 +10,7 @@
         <span>{{detailInfo.detailImage[0].key}}</span>
       </div>
       <div class="effect-img">
-        <img :src="item" alt="" v-for="item in detailInfo.detailImage[0].list">
+        <img :src="item" alt="" v-for="item in detailInfo.detailImage[0].list" @load="loadImg">
       </div>
     </div>
   </div>
@@ -26,13 +26,20 @@
           return {}
         }
       }
+    },
+    methods: {
+      loadImg() {
+        // console.log('---------')
+        this.$emit('imgLoad')
+      }
     }
   }
 </script>
 
 <style scoped>
   .detail-param {
-    margin-bottom: 50px;
+    padding-bottom: 30px;
+    border-bottom: 3px solid #f4f6f9;
   }
   .param-desc .first,.last {
     width: 100px;

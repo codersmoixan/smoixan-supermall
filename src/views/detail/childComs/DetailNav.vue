@@ -4,7 +4,9 @@
       <img src="~assets/images/common/back.svg" alt="">
     </div>
     <div slot="nav-center" class="nav-box">
-      <div v-for="(item, index) in detailData" class="nav-item" @click="itemClick(index)" :class="{active: index === currentIndex}">{{item}}</div>
+      <div v-for="(item, index) in detailData" class="nav-item"
+           @click="itemClick(index)"
+           :class="{active: index === currentIndex}">{{item}}</div>
     </div>
   </nav-bar>
 </template>
@@ -13,10 +15,15 @@
   import NavBar from 'components/common/navbar/NavBar'
   export default {
     name: "NetailNv",
+    props: {
+      currentIndex: {
+        type: Number,
+        default: 0
+      }
+    },
     data() {
       return {
         detailData: ['商品', '参数', '评论', '推荐'],
-        currentIndex: 0
       }
     },
     methods: {
@@ -24,7 +31,7 @@
         this.$router.back()
       },
       itemClick(index) {
-        this.currentIndex = index
+        this.$emit('buttonClick', index)
       }
     },
     components: {

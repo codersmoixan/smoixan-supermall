@@ -21,6 +21,11 @@
         }
       }
     },
+    methods: {
+      itemImgLoad() {
+        console.log('------');
+      }
+    },
     components: {
       GoodsListItem
     }
